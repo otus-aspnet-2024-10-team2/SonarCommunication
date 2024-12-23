@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarCommunication.WebHost", "SonarCommunication.WebHost\SonarCommunication.WebHost.csproj", "{548750A6-DFC1-44FA-8E3E-7358A836072B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarCommunication.Core", "SonarCommunication.Core\SonarCommunication.Core.csproj", "{98E61E41-6F89-4999-B70F-475B7E26BC4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarCommunication.DataAccess", "SonarCommunication.DataAccess\SonarCommunication.DataAccess.csproj", "{901BCA95-355E-43F4-B03B-AE14515B55CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{548750A6-DFC1-44FA-8E3E-7358A836072B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548750A6-DFC1-44FA-8E3E-7358A836072B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548750A6-DFC1-44FA-8E3E-7358A836072B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{548750A6-DFC1-44FA-8E3E-7358A836072B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98E61E41-6F89-4999-B70F-475B7E26BC4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98E61E41-6F89-4999-B70F-475B7E26BC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98E61E41-6F89-4999-B70F-475B7E26BC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98E61E41-6F89-4999-B70F-475B7E26BC4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{901BCA95-355E-43F4-B03B-AE14515B55CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{901BCA95-355E-43F4-B03B-AE14515B55CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{901BCA95-355E-43F4-B03B-AE14515B55CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{901BCA95-355E-43F4-B03B-AE14515B55CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
