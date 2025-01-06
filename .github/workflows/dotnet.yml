@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      home_dir: SonarCommunication.WebHost
+      home_dir: ./SonarCommunication.WebHost
 
     steps:
     - uses: actions/checkout@v4
