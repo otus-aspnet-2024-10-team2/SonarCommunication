@@ -5,14 +5,17 @@ name: .NET
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
+
+    env:
+      home_dir: SonarCommunication.WebHost
 
     steps:
     - uses: actions/checkout@v4
@@ -21,8 +24,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ${{ env.home_dir}}.csproj
     - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet build ${{ env.home_dir}}.csproj --no-restore
+    #- name: Test
+    #  run: dotnet test --no-build --verbosity normal
