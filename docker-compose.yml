@@ -1,0 +1,6 @@
+services:
+  sonarcommunication.webhost:
+    image: ${DOCKER_REGISTRY-}sonarcommunicationwebhost
+    build:
+      context: .
+      dockerfile: SonarCommunication.WebHost/Dockerfile
