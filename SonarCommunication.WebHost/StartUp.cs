@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SonarCommunication.Core.Abstraction.Repositories;
+using SonarCommunication.Core.Domain.SearchGroups;
+using SonarCommunication.Core.Domain.Statements;
+using SonarCommunication.Core.Domain.VolontersManagment;
 using SonarCommunication.DataAccess.Data;
 using SonarCommunication.DataAccess.Repositories;
 
@@ -29,8 +32,11 @@ public class StartUp
             o.Version = "0.1";
         });
 
-        services.AddScoped(typeof(IBaseRepositories<>), typeof(EFBaseRepository<>));
-        services.AddScoped(typeof(IMailingAll<>),typeof(EFMailingRepository<>));
+        services.AddScoped(typeof(IBaseRepositories<Statment>), typeof(EFBaseRepository<Statment>));
+        services.AddScoped(typeof(IMailingAll<Volunteer>),typeof(EFMailingRepository<Volunteer>));
+
+        services.AddScoped(typeof(IRepository<SearchGroup>), typeof(SearchGroupRepository));
+        services.AddScoped(typeof(IRepository<GroupMember>), typeof(GroupMemberRepository));
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
