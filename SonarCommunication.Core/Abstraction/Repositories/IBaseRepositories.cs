@@ -1,4 +1,5 @@
 ﻿using SonarCommunication.Core.Domain;
+using SonarCommunication.Core.Domain.Statements;
 
 namespace SonarCommunication.Core.Abstraction.Repositories;
 /// <summary>
@@ -16,4 +17,6 @@ public interface IBaseRepositories<T> where T : BaseEntity
     Task UpdateStatementAsync(T statement);
     
     Task DeleteStatementAsync(T statement);
+    
+    Task<T?> GetStatmentFromIdAsync(long id);
 }

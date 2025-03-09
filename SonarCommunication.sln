@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarCommunication.WebHost", "SonarCommunication.WebHost\SonarCommunication.WebHost.csproj", "{548750A6-DFC1-44FA-8E3E-7358A836072B}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarCommunication.DataAccess", "SonarCommunication.DataAccess\SonarCommunication.DataAccess.csproj", "{901BCA95-355E-43F4-B03B-AE14515B55CF}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D8BA744A-C0A7-4287-9580-A5AADAD969AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonarCommunication.UnitTest", "..\SonarCommunication.UnitTest\SonarCommunication.UnitTest.csproj", "{6D05B02F-7B9A-46E2-B144-F163BDC2ECDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D8BA744A-C0A7-4287-9580-A5AADAD969AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8BA744A-C0A7-4287-9580-A5AADAD969AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8BA744A-C0A7-4287-9580-A5AADAD969AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D05B02F-7B9A-46E2-B144-F163BDC2ECDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D05B02F-7B9A-46E2-B144-F163BDC2ECDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D05B02F-7B9A-46E2-B144-F163BDC2ECDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D05B02F-7B9A-46E2-B144-F163BDC2ECDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

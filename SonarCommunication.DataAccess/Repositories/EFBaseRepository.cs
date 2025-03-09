@@ -1,5 +1,7 @@
-﻿using SonarCommunication.Core.Abstraction.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
+using SonarCommunication.Core.Abstraction.Repositories;
 using SonarCommunication.Core.Domain;
+using SonarCommunication.Core.Domain.Statements;
 using SonarCommunication.DataAccess.Data;
 
 namespace SonarCommunication.DataAccess.Repositories;
@@ -12,29 +14,58 @@ public class EFBaseRepository<T> : IBaseRepositories<T> where T : BaseEntity
     {
         _ctx = ctx;
     }
-    //TODO: Сделать реализацию для каждого метода
-    public Task<List<T>> GetAllStatementsAsync()
+    /// <summary>
+    /// Получить все сообщения
+    /// </summary>
+    /// <returns></returns>
+    public async Task<List<T>> GetAllStatementsAsync()
     {
-        throw new NotImplementedException();
+        return await _ctx.Set<T>().ToListAsync();
     }
-
-    public Task CreateNewStatementAsync(T statement)
+    /// <summary>
+    /// Создать новое сообщение
+    /// </summary>
+    /// <param name="statement"></param>
+    public async Task CreateNewStatementAsync(T statement)
     {
-        throw new NotImplementedException();
+        await _ctx.Set<T>().AddAsync(statement);
+        await _ctx.SaveChangesAsync();  
     }
 
     public Task ReadStatementAsync(T statement)
     {
         throw new NotImplementedException();
     }
-
-    public Task UpdateStatementAsync(T statement)
+    /// <summary>
+    /// Обновить сообщение
+    /// </summary>
+    /// <param name="statement"></param>
+    /// <returns></returns>
+    public async Task UpdateStatementAsync(T statement)
     {
-        throw new NotImplementedException();
+        await _ctx.SaveChangesAsync();
     }
-
+    /// <summary>
+    /// Удалить сообщение
+    /// </summary>
+    /// <param name="statement"></param>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
     public Task DeleteStatementAsync(T statement)
     {
-        throw new NotImplementedException();
+        _ctx.Set<T>().Remove(statement);
+        return _ctx.SaveChangesAsync();
+    }
+
+    /// <summary>
+    /// Получить сообщение по конкретному ID
+    /// </summary>
+    /// <param name="id">ID сообщение</param>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
+    public async Task<T?> GetStatmentFromIdAsync(long id)
+    {
+        var record = await _ctx.Set<T>().FirstOrDefaultAsync(x=> x.Id == id);
+        return record;
     }
 }
